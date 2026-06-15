@@ -19,7 +19,7 @@ import { budgetComparison, keyStats } from "@/lib/data"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 }
 const stagger = {
   hidden: {},
@@ -175,7 +175,7 @@ export default function FinancialSection() {
                 <LabelList
                   dataKey="value"
                   position="right"
-                  formatter={(v: number) => `Rp${v.toLocaleString("id-ID", { minimumFractionDigits: 2 })}T`}
+                  formatter={(v: unknown) => `Rp${(v as number).toLocaleString("id-ID", { minimumFractionDigits: 2 })}T`}
                   style={{ fill: "#9CA3AF", fontSize: 11, fontFamily: "var(--font-mono)" }}
                 />
               </Bar>

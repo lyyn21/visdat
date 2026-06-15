@@ -19,11 +19,11 @@ const stagger = {
 }
 const cardVariant = {
   hidden: { opacity: 0, scale: 0.92, y: 30 },
-  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 }
 const letterVariant = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
 }
 
 const letterColors = ["#DC2626", "#EA580C", "#D97706", "#CA8A04"]

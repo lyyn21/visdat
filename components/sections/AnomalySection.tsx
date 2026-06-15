@@ -19,7 +19,7 @@ import { nationalDivorceCauses, nationalDivorceTotal } from "@/lib/data"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 }
 
 const CustomBarTooltip = ({ active, payload }: any) => {
@@ -105,7 +105,7 @@ export default function AnomalySection() {
                   <LabelList
                     dataKey="cases"
                     position="right"
-                    formatter={(v: number) => v.toLocaleString("id-ID")}
+                    formatter={(v: unknown) => (v as number).toLocaleString("id-ID")}
                     style={{ fill: "#9CA3AF", fontSize: 11, fontFamily: "var(--font-mono)" }}
                   />
                 </Bar>

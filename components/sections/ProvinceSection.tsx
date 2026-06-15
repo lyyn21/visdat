@@ -218,7 +218,7 @@ export default function ProvinceSection() {
                         fontSize: 11,
                         fontFamily: "monospace",
                       }}
-                      formatter={(v: number) => v.toLocaleString("id-ID")}
+                      formatter={(v: unknown) => (v as number).toLocaleString("id-ID")}
                     />
                   </Bar>
                 </BarChart>
