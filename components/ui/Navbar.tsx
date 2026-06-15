@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 const navLinks = [
   { href: "#tren", label: "Tren Data" },
@@ -41,9 +42,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 flex items-center gap-2">
+            <Image 
+              src="/logo.png" 
+              alt="Logo Kelompok Badak" 
+              width={32} 
+              height={32} 
+              className="rounded object-contain"
+            />
             <span
-              className="font-display text-sm tracking-widest font-bold uppercase"
+              className="font-display text-sm tracking-widest font-bold uppercase hidden sm:block"
               style={{ color: "#DC2626" }}
             >
               JUDOL & PERCERAIAN
