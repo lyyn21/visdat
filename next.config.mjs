@@ -1,11 +1,15 @@
 /** @type {import('next').NextConfig} */
+
+// basePath hanya untuk GitHub Pages — dev & Netlify pakai root
+const isGitHubPages = process.env.GITHUB_PAGES === "true"
+
 const nextConfig = {
   output: "export",          // Static HTML export — untuk Firebase & GitHub Pages
   images: {
     unoptimized: true,       // next/image tidak support static export tanpa ini
   },
-  basePath: "/visdat",       // Nama repo GitHub — wajib untuk GitHub Pages
-  assetPrefix: "/visdat",    // Pastikan asset (JS/CSS) dimuat dari path yang benar
+  basePath:    isGitHubPages ? "/visdat" : "",
+  assetPrefix: isGitHubPages ? "/visdat" : "",
   eslint: {
     ignoreDuringBuilds: true, // Skip ESLint saat build production
   },
