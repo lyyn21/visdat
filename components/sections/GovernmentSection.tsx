@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { ShieldOff, CreditCard, TrendingDown, ShieldCheck, AlertTriangle } from "lucide-react"
 import SectionTitle from "@/components/ui/SectionTitle"
-import AnimatedCounter from "@/components/ui/AnimatedCounter"
-import { governmentActions, keyStats } from "@/lib/data"
+import { governmentActions } from "@/lib/data"
 
 const iconMap: Record<string, React.ElementType> = {
   ShieldOff,

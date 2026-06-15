@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { MapContainer, TileLayer, GeoJSON, ZoomControl } from "react-leaflet"
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet"
 import "leaflet/dist/leaflet.css"
 import type { Layer, PathOptions, GeoJSON as LeafletGeoJSON } from "leaflet"
 import type { Feature, GeoJsonObject } from "geojson"

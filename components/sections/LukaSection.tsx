@@ -142,9 +142,9 @@ export default function LukaSection() {
           }}
         >
           <p className="font-body text-gray-300 text-lg sm:text-xl italic leading-relaxed text-center">
-            "Ribuan keluarga sudah hancur karena judi online,
+            &ldquo;Ribuan keluarga sudah hancur karena judi online,
             meninggalkan luka dan perpecahan yang sulit diperbaiki.
-            Jangan sampai hal ini terjadi pada keluargamu."
+            Jangan sampai hal ini terjadi pada keluargamu.&rdquo;
           </p>
         </motion.div>
       </div>

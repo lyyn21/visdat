@@ -22,6 +22,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomBarTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     const d = payload[0].payload
@@ -193,8 +194,8 @@ export default function AnomalySection() {
           className="mt-12 pl-6 italic font-body text-gray-300 text-lg sm:text-xl leading-relaxed max-w-3xl"
           style={{ borderLeft: "4px solid #DC2626" }}
         >
-          "Ketika dunia berhasil menekan angka perceraian —
-          judi online berjalan di arah yang sebaliknya."
+          &ldquo;Ketika dunia berhasil menekan angka perceraian &mdash;
+          judi online berjalan di arah yang sebaliknya.&rdquo;
         </motion.blockquote>
       </div>
     </section>

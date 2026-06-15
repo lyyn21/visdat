@@ -15,7 +15,7 @@ import {
 } from "recharts"
 import { ArrowDown, Lightbulb, Info, TrendingDown } from "lucide-react"
 import SectionTitle from "@/components/ui/SectionTitle"
-import { budgetComparison, keyStats } from "@/lib/data"
+import { budgetComparison } from "@/lib/data"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -26,6 +26,7 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.15 } }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     const d = payload[0].payload
